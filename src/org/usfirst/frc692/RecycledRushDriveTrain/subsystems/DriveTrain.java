@@ -97,4 +97,164 @@ public class DriveTrain extends Subsystem {
     // made a constructor to get values of joystick to drive in one direction WITHOUT GYRO
     // EV 1/15/2015
     }
+    
+    public int getLeftFrontEncoderCount() {
+    	return leftFrontEncoder.get();
+    }
+    // gets count from left front encoder
+    // AO 1/17/15
+    
+    public int getLeftBackEncoderCount() {
+    	return leftBackEncoder.get();	
+    }
+    // gets count from left back encoder
+    // AO /17/15
+    
+    public int getRightFrontEncoderCount() {
+    	return rightFrontEncoder.get();
+    }
+    // gets count from right front encoder
+    // AO 1/17/15
+    
+    public int getRightBackEncoderCount() {
+    	return rightBackEncoder.get();
+    }
+    // get count from right back encoder
+    // AO 1/17/15
+    
+    public boolean getLeftFrontEncoderDirection() {
+    	if (leftFrontEncoder.getDirection() == true)
+    		return true;
+    	else
+    		return false;
+    }
+    // get the direction of the last value change (true for Up, false for Down)
+    // EV 1/17/2015
+    
+    public boolean getLeftBackEncoderDirection() {
+    	if (leftBackEncoder.getDirection() == true)
+    		return true;
+    	else
+    		return false;
+    }
+    // get the direction of the last value change (true for Up, false for Down)
+    // EV 1/17/2015
+    
+    public boolean getRightFrontEncoderDirection() {
+    	if (rightFrontEncoder.getDirection() == true)
+    		return true;
+    	else
+    		return false;
+    }
+    // get the direction of the last value change (true for Up, false for Down)
+    // EV 1/17/2015
+    
+    public boolean getRightBackEncoderDirection() {
+    	if (rightBackEncoder.getDirection() == true)
+    		return true;
+    	else
+    		return false;
+    }
+    // get the direction of the last value change (true for Up, false for Down)
+    // EV 1/17/2015
+    
+    public double getLeftFrontEncoderDistance() {
+    	return leftFrontEncoder.getDistance();
+    }
+    // gets the current distance reading from the counter
+    // this is the count multiplied by the Distance Per Count scale factor
+    // ND 1/17/15
+    
+    public double getLeftBackEncoderDistance() {
+    	return leftBackEncoder.getDistance();
+    }
+    // gets the current distance reading from the counter
+    // this is the count multiplied by the Distance Per Count scale factor
+    // ND 1/17/15
+	
+    public double getRightFrontEncoderDistance() {
+    	return rightFrontEncoder.getDistance();
+    }
+    // gets the current distance reading from the counter
+    // this is the count multiplied by the Distance Per Count scale factor
+    // ND 1/17/15
+    
+    public double getRightBackEncoderDistance() {
+    	return rightBackEncoder.getDistance();
+    }
+    // gets the current distance reading from the counter
+    // this is the count multiplied by the Distance Per Count scale factor
+    // ND 1/17/15
+    
+    public double getAllLeftAndRightEncodersDistance() {
+    	return getLeftFrontEncoderDistance() + getLeftBackEncoderDistance() + getRightFrontEncoderDistance() + getRightBackEncoderDistance();
+    }
+    // taking all of the values of all of the encoders
+    // AO 1/17/15
+    
+    public double getLeftFrontEncoderRate() {
+    	return leftFrontEncoder.getRate();
+    }
+    // gets the current rate of the counter in units/sec
+    // it is calculated using the DistancePerPulse divided by the period
+    // if the counter is stopped this value may return Inf or NaN, depending on language
+    // AO 1/17/15
+    
+    public double getLeftBackEncoderRate() {
+    	return leftBackEncoder.getRate();
+    }
+    // gets the current rate of the counter in units/sec
+    // it is calculated using the DistancePerPulse divided by the period
+    // if the counter is stopped this value may return Inf or NaN, depending on language
+    // AO 1/17/15
+    
+    public double getRightFrontEncoderRate() {
+    	return rightFrontEncoder.getRate();
+    }
+    // gets the current rate of the counter in units/sec
+    // it is calculated using the DistancePerPulse divided by the period
+    // if the counter is stopped this value may return Inf or NaN, depending on language
+    // AO 1/17/15
+    
+    public double getRightBackEncoderRate() {
+    	return rightBackEncoder.getRate();
+    }
+    // gets the current rate of the counter in units/sec
+    // it is calculated using the DistancePerPulse divided by the period
+    // if the counter is stopped this value may return Inf or NaN, depending on language
+    // AO 1/17/15
+    
+    public boolean allEncodersStopCounting() {
+    	if (leftFrontEncoder.getStopped() && leftBackEncoder.getStopped() && rightFrontEncoder.getStopped() && rightBackEncoder.getStopped() == true)
+    		return true; 
+    	else 
+    		return false; 
+    }
+    // checks if all encoders have stopped counting (because conditional statement)
+    // AO 1/17/15 
+    
+    public double getLeftFrontEncoderRaw() {
+    	return leftFrontEncoder.getRaw();
+    }
+    // gets the count without compensation for decoding scale factor
+    // EV 1/17/2015
+
+    
+    public double getLeftBackEncoderRaw() {
+    	return leftBackEncoder.getRaw();
+    }
+    // gets the count without compensation for decoding scale factor
+    // EV 1/17/2015
+    
+    public double getRightFrontEncoderRaw() {
+    	return rightFrontEncoder.getRaw();
+    }
+    // gets the count without compensation for decoding scale factor
+    // EV 1/17/2015
+    
+    public double getRightBackEncoderRaw() {
+    	return rightBackEncoder.getRaw();
+    }
+    // gets the count without compensation for decoding scale factor
+    // EV 1/17/2015
 }

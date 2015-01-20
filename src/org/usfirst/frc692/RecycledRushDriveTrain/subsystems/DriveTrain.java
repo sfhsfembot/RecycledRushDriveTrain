@@ -85,6 +85,12 @@ public class DriveTrain extends Subsystem {
     }
     // moves all motors in the right direction
     // EV 1/12/2015
+    
+    public void stopDrive() {
+    	robotDrive.mecanumDrive_Cartesian(0.0, 0.0, 0.0, 0.0);
+    }
+    // stops all motors
+    // EV 1/19/2015
   
     public void takeJoystickValueGyro(double xaxis, double yaxis, double rotate, double gyro) {
     	robotDrive.mecanumDrive_Cartesian(xaxis, yaxis, rotate, gyro);

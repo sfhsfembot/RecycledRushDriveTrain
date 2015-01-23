@@ -50,6 +50,11 @@ public class  DriveManual extends Command {
     	Robot.driveTrain.takeJoystickValueDefault(x, y, rotation);
     	// takes the new values and put them in for method
     	// EV 1/16/2015
+    	
+    	System.out.println(x);
+    	System.out.println(y);
+    	System.out.println(rotation);
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()

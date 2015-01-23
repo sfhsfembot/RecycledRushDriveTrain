@@ -47,10 +47,15 @@ public class  DriveBackCentric extends Command {
     	//double zinvert = rotation * -1.0;
     	// made inverted variables just in case
     	// EV 1/16/2015
-    	
+
     	Robot.driveTrain.takeJoystickValueGyro(x, y, rotation, gyroAngle);
     	// takes the new values and put them in for method
     	// EV 1/16/2015
+    	
+    	System.out.println(x);
+    	System.out.println(y);
+    	System.out.println(rotation);
+    	System.out.println(gyroAngle);
     }
 
     // Make this return true when this Command no longer needs to run execute()

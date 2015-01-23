@@ -47,6 +47,11 @@ public class  DriveFrontCentric extends Command {
     	Robot.driveTrain.takeJoystickValueGyro(x, y, rotation, gyroAngle);
     	// takes the new values and put them in for method
     	// EV 1/16/2015
+    	
+    	System.out.println(x);
+    	System.out.println(y);
+    	System.out.println(rotation);
+    	System.out.println(gyroAngle);
     }
 
     // Called repeatedly when this Command is scheduled to run

@@ -92,7 +92,7 @@ public class DriveTrain extends Subsystem {
     // stops all motors
     // EV 1/19/2015
   
-    public void takeJoystickValueGyro(double xaxis, double yaxis, double rotate, double gyro) {
+    public void takeJoystickValueGyro(double xaxis, double yaxis, double rotate, double gyro) { 
     	robotDrive.mecanumDrive_Cartesian(xaxis, yaxis, rotate, gyro);
     }
     // made a constructor to get values of joystick to drive in one direction WITH GYRO
@@ -146,7 +146,7 @@ public class DriveTrain extends Subsystem {
     // get the direction of the last value change (true for Up, false for Down)
     // EV 1/17/2015
     
-    public boolean getRightFrontEncoderDirection() {
+    public boolean getRightFrontEncoderDirection () {
     	if (rightFrontEncoder.getDirection() == true)
     		return true;
     	else

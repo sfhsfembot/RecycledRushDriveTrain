@@ -32,7 +32,7 @@ public class DriveTrain extends Subsystem {
     SpeedController rightFrontTalon2 = RobotMap.driveTrainrightFrontTalon2;
     SpeedController rightBackTalon3 = RobotMap.driveTrainrightBackTalon3;
     RobotDrive robotDrive = RobotMap.driveTrainRobotDrive;
-    Gyro gyro = RobotMap.driveTrainGyro;
+    Gyro gyro = RobotMap.driveTraingyro;
     Encoder leftFrontEncoder = RobotMap.driveTrainleftFrontEncoder;
     Encoder leftBackEncoder = RobotMap.driveTrainleftBackEncoder;
     Encoder rightFrontEncoder = RobotMap.driveTrainrightFrontEncoder;

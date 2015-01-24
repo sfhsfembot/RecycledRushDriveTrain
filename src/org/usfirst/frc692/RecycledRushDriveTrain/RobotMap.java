@@ -36,7 +36,7 @@ public class RobotMap {
     public static SpeedController driveTrainrightFrontTalon2;
     public static SpeedController driveTrainrightBackTalon3;
     public static RobotDrive driveTrainRobotDrive;
-    public static Gyro driveTrainGyro;
+    public static Gyro driveTraingyro;
     public static Encoder driveTrainleftFrontEncoder;
     public static Encoder driveTrainleftBackEncoder;
     public static Encoder driveTrainrightFrontEncoder;
@@ -66,9 +66,9 @@ public class RobotMap {
         driveTrainRobotDrive.setSensitivity(0.5);
         driveTrainRobotDrive.setMaxOutput(1.0);
 
-        driveTrainGyro = new Gyro(0);
-        LiveWindow.addSensor("DriveTrain", "Gyro", driveTrainGyro);
-        driveTrainGyro.setSensitivity(0.007);
+        driveTraingyro = new Gyro(0);
+        LiveWindow.addSensor("DriveTrain", "gyro", driveTraingyro);
+        driveTraingyro.setSensitivity(0.007);
         driveTrainleftFrontEncoder = new Encoder(17, 18, false, EncodingType.k4X);
         LiveWindow.addSensor("DriveTrain", "leftFrontEncoder", driveTrainleftFrontEncoder);
         driveTrainleftFrontEncoder.setDistancePerPulse(1.0);

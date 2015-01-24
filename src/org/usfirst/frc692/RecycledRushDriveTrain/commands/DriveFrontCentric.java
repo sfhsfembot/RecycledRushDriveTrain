@@ -36,7 +36,7 @@ public class  DriveFrontCentric extends Command {
     	double x = Robot.oi.driveJoystick.getX();
     	double y = Robot.oi.driveJoystick.getY();
     	double rotation = Robot.oi.driveJoystick.getZ();
-    	double gyroAngle = RobotMap.driveTrainGyro.getAngle();
+    	double gyroAngle = RobotMap.driveTraingyro.getAngle();
     	
     	//double xinvert = x * -1.0;
     	//double yinvert = y * -1.0;

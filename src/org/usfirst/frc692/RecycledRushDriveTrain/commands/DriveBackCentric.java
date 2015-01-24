@@ -40,7 +40,7 @@ public class  DriveBackCentric extends Command {
     	double x = Robot.oi.driveJoystick.getX();
     	double y = Robot.oi.driveJoystick.getY();
     	double rotation = Robot.oi.driveJoystick.getZ();
-    	double gyroAngle = RobotMap.driveTrainGyro.getAngle() - 180.0;
+    	double gyroAngle = RobotMap.driveTraingyro.getAngle() - 180.0;
     	
     	//double xinvert = x * -1.0;
     	//double yinvert = y * -1.0;
